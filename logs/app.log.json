@@ -1,0 +1,63 @@
+[
+    {
+        "timestamp": "2026-02-23T22:13:17.515636",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_7dfc754a",
+            "session_id": "e1dfb29e-5ff4-4e29-816b-c43c192b21b4"
+        }
+    },
+    {
+        "timestamp": "2026-02-23T22:13:34.177756",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_d2d9c781",
+            "session_id": "3513ef2e-e351-4a44-9082-00602c05edd2"
+        }
+    },
+    {
+        "timestamp": "2026-02-23T22:15:36.943030",
+        "level": "ERROR",
+        "type": "link_summarization_failed",
+        "metadata": {
+            "user_id": "user_d641431a",
+            "session_id": "036b1edc-560f-45c7-a574-35feb6afc632",
+            "error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+        }
+    },
+    {
+        "timestamp": "2026-02-23T22:17:37.077571",
+        "level": "INFO",
+        "type": "link_summarized",
+        "metadata": {
+            "user_id": "user_d641431a",
+            "session_id": "036b1edc-560f-45c7-a574-35feb6afc632",
+            "model": "gemini-3-flash-preview",
+            "url": "https://www.mlb.com/news/shohei-ohtani-50-50-season-stats-and-fun-facts"
+        }
+    },
+    {
+        "timestamp": "2026-02-23T22:19:12.096483",
+        "level": "INFO",
+        "type": "pdf_summarized",
+        "metadata": {
+            "user_id": "user_d641431a",
+            "session_id": "036b1edc-560f-45c7-a574-35feb6afc632",
+            "model": "gemini-3-flash-preview",
+            "filename": "Business Pre-work Khalifa M NIAMADIO.pdf"
+        }
+    },
+    {
+        "timestamp": "2026-02-23T22:27:06.701103",
+        "level": "INFO",
+        "type": "link_summarized",
+        "metadata": {
+            "user_id": "user_72ba7490",
+            "session_id": "7b8cc3a0-b10b-440f-ad90-d829744c08e7",
+            "model": "gemini-3-flash-preview",
+            "url": "https://www.mlb.com/news/shohei-ohtani-50-50-season-stats-and-fun-facts"
+        }
+    }
+]
