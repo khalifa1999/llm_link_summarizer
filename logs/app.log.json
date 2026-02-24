@@ -59,5 +59,101 @@
             "model": "gemini-3-flash-preview",
             "url": "https://www.mlb.com/news/shohei-ohtani-50-50-season-stats-and-fun-facts"
         }
+    },
+    {
+        "timestamp": "2026-02-23T22:47:50.321449",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_7812be27",
+            "session_id": "52324f97-426d-43b0-bb05-a1d075bff254"
+        }
+    },
+    {
+        "timestamp": "2026-02-23T23:12:12.176088",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_b25679da",
+            "session_id": "b6d9f753-f5b5-49aa-82e4-9e05dd23db70"
+        }
+    },
+    {
+        "timestamp": "2026-02-23T23:13:10.096771",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_2bb31181",
+            "session_id": "240f33eb-8553-494c-ad60-02fd09c20763"
+        }
+    },
+    {
+        "timestamp": "2026-02-24T13:53:53.991882",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_72b8ee21",
+            "session_id": "46168185-2947-47ba-958d-47c032ffccac"
+        }
+    },
+    {
+        "timestamp": "2026-02-24T13:53:54.659097",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_5d324d7b",
+            "session_id": "b5eca789-dab9-4808-b2cd-48ec937aecbd"
+        }
+    },
+    {
+        "timestamp": "2026-02-24T13:54:48.372322",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_bd44de3c",
+            "session_id": "5085462b-30ee-42ca-b33a-12ec2b19a1c4"
+        }
+    },
+    {
+        "timestamp": "2026-02-24T14:01:46.566757",
+        "level": "WARNING",
+        "type": "api_key_missing",
+        "metadata": {
+            "user_id": "user_bd44de3c",
+            "session_id": "5085462b-30ee-42ca-b33a-12ec2b19a1c4"
+        }
+    },
+    {
+        "timestamp": "2026-02-24T14:11:27.224986",
+        "level": "INFO",
+        "type": "link_summarized",
+        "metadata": {
+            "user_id": "user_f8b46a1b",
+            "session_id": "a1acc0f7-d5b6-4c55-b553-d03146101f14",
+            "model": "gemma-3-1b-it",
+            "url": "https://www.mlb.com/news/shohei-ohtani-reaches-50-homers-50-steals"
+        }
+    },
+    {
+        "timestamp": "2026-02-24T14:12:12.317504",
+        "level": "INFO",
+        "type": "link_summarized",
+        "metadata": {
+            "user_id": "user_f8b46a1b",
+            "session_id": "a1acc0f7-d5b6-4c55-b553-d03146101f14",
+            "model": "gemma-3-1b-it",
+            "url": "https://www.mlb.com/news/jazz-chisholm-jr-on-hopes-for-a-50-50-season-in-2026"
+        }
+    },
+    {
+        "timestamp": "2026-02-24T14:12:51.971167",
+        "level": "INFO",
+        "type": "pdf_summarized",
+        "metadata": {
+            "user_id": "user_f8b46a1b",
+            "session_id": "a1acc0f7-d5b6-4c55-b553-d03146101f14",
+            "model": "gemma-3-1b-it",
+            "filename": "Business Pre-work Khalifa M NIAMADIO.pdf"
+        }
     }
 ]

@@ -53,6 +53,16 @@ cp .env.example .env
 GOOGLE_API_KEY=your_actual_api_key_here
 ```
 
+2. Set the name of the model you plan to use to run your app:
+   - Visit [Google docs](https://ai.google.dev/gemini-api/docs/models)
+   - Pick a model that suits your needs
+   - Copy it to your `.env` file:
+
+```
+GOOGLE_MODEL=your_actual_model_name
+```
+
+
 ## Running the Application
 
 ### Start the Streamlit Server

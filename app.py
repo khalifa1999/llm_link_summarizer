@@ -7,11 +7,18 @@ from pathlib import Path
 
 import streamlit as st
 import google.generativeai as genai
+## later switch to google.genai the former one has been depreceated
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 
 LOG_DIR = Path("logs")
 LOG_FILE = LOG_DIR / "app.log.json"
+load_dotenv()
+
+google_model = os.getenv("GOOGLE_MODEL")
+#print("Nom du model utilisé", google_model)
+
+
 
 EIT_PERSONALITY = """You are Khalifa Mamadou NIAMADIO, a full-stack developer, technology innovator, and entrepreneur passionate about building solutions that solve real problems through software and community impact.
 
@@ -77,6 +84,8 @@ def log_event(level: str, event_type: str, metadata: dict):
 def check_api_key() -> tuple[bool, str]:
     load_dotenv()
     api_key = os.getenv("GOOGLE_API_KEY")
+    #google model
+     #print("le model de google utilisé", google_model , api_key)
     
     if not api_key:
         return False, "❌ API Key Not Found\n\nPlease create a `.env` file in the project root and add your Google API key:\n\n```\nGOOGLE_API_KEY=your_api_key_here\n```\n\nGet your API key from: https://aistudio.google.com/app/apikey"
@@ -86,7 +95,7 @@ def check_api_key() -> tuple[bool, str]:
     
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-3-flash-preview")
+        model = genai.GenerativeModel(google_model)
         model.generate_content("Hello")
         return True, "✅ API Key Initialized Successfully"
     except Exception as e:
@@ -170,7 +179,7 @@ def main():
         st.markdown(f"**Session ID:** `{st.session_state.session_id[:8]}...`")
     
     st.title("📚 EIT AI Assistant")
-    st.markdown("Your personal AI assistant powered by Gemini 3 Flash")
+    st.markdown("Your personal AI assistant powered by Gemma")
     
     if not st.session_state.api_verified:
         st.warning("⚠️ Please configure your API key to use this application.")
@@ -190,7 +199,7 @@ def main():
             if url:
                 with st.spinner("🔄 Summarizing the article..."):
                     try:
-                        model = genai.GenerativeModel("gemini-3-flash-preview")
+                        model = genai.GenerativeModel(google_model)
                         summary = summarize_link(url, model)
                         
                         st.success("✅ Summary Generated!")
@@ -200,7 +209,7 @@ def main():
                         log_event("INFO", "link_summarized", {
                             "user_id": st.session_state.user_id,
                             "session_id": st.session_state.session_id,
-                            "model": "gemini-3-flash-preview",
+                            "model": google_model,
                             "url": url
                         })
                     except Exception as e:
@@ -220,7 +229,7 @@ def main():
         if uploaded_file is not None and st.button("Summarize PDF", type="primary"):
             with st.spinner("🔄 Extracting and summarizing the PDF..."):
                 try:
-                    model = genai.GenerativeModel("gemini-3-flash-preview")
+                    model = genai.GenerativeModel(google_model)
                     summary = summarize_pdf(uploaded_file, model)
                     
                     st.success("✅ Summary Generated!")
@@ -230,7 +239,7 @@ def main():
                     log_event("INFO", "pdf_summarized", {
                         "user_id": st.session_state.user_id,
                         "session_id": st.session_state.session_id,
-                        "model": "gemini-3-flash-preview",
+                        "model": google_model,
                         "filename": uploaded_file.name
                     })
                 except Exception as e:
