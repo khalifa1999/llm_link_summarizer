@@ -155,5 +155,16 @@
             "model": "gemma-3-1b-it",
             "filename": "Business Pre-work Khalifa M NIAMADIO.pdf"
         }
+    },
+    {
+        "timestamp": "2026-02-24T15:08:27.072403",
+        "level": "INFO",
+        "type": "link_summarized",
+        "metadata": {
+            "user_id": "user_b152a75f",
+            "session_id": "b7abb5df-37a2-462f-8ddc-28d76c6dee55",
+            "model": "gemma-3-27b-it",
+            "url": "https://www.mlb.com/news/jazz-chisholm-jr-on-hopes-for-a-50-50-season-in-2026"
+        }
     }
 ]
